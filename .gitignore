@@ -1,0 +1,47 @@
+# Ignorar arquivos binários e de build
+bin/
+obj/
+
+# Ignorar arquivos de logs
+*.log
+
+# Ignorar pacotes do NuGet
+*.nupkg
+*.snupkg
+
+# Ignorar a pasta de pacotes restaurados pelo NuGet
+packages/
+
+# Ignorar arquivos de configuração do Visual Studio
+.vscode/
+.vs/
+*.csproj.user
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignorar arquivos gerados pelo sistema operacional
+.DS_Store
+Thumbs.db
+
+# Ignorar diretórios de publicação
+PublishProfiles/
+
+# Ignorar arquivos temporários e de cache
+*.tmp
+*.temp
+tmp/
+temp/
+.cache/
+.gradle/
+.idea/
+
+# Ignorar diretórios de node_modules, caso você esteja usando bibliotecas JavaScript
+node_modules/
+
+# Ignorar arquivos do ambiente local
+.env
+
+# Ignorar arquivos de configuração locais
+launchSettings.json

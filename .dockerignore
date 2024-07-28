@@ -1,0 +1,34 @@
+# Ignore arquivos e diretórios específicos do sistema operacional
+**/.DS_Store
+**/Thumbs.db
+
+# Ignore diretórios de build
+bin/
+obj/
+
+# Ignore diretórios de configuração do Visual Studio
+.vscode/
+.vs/
+
+# Ignore arquivos de logs
+*.log
+
+# Ignore pacotes do NuGet
+*.nupkg
+*.snupkg
+
+# Ignore a pasta de pacotes restaurados pelo NuGet
+**/packages/
+**/node_modules/
+
+# Ignore arquivos de publicação do ASP.NET Core
+**/Properties/PublishProfiles/
+
+# Ignore arquivos temporários e de cache
+*.tmp
+*.temp
+tmp/
+temp/
+.cache/
+.gradle/
+.idea/
