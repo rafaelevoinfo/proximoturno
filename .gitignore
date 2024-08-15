@@ -1,0 +1,5 @@
+**/bin/**
+**/obj/**
+**/node_modules/**
+/ProximoTurnoClient/wwwroot/css/theme.min.css
+/ProximoTurnoClient/wwwroot/css/theme.css
