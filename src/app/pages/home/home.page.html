@@ -1,0 +1,219 @@
+<ion-content class="">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content> </ion-refresher-content>
+  </ion-refresher>
+  <div class="background-geral pb-5">
+    <div class="flex items-center justify-center">
+      <div
+        class="flex flex-col justify-between bg-cabecalho w-full m-5 rounded-3xl shadow-lg"
+      >
+        <div class="flex flex-wrap p-2 w-full">
+          <div class="dummy-space"></div>
+          <!-- or alternatively use: <div class="h-36"></div> -->
+          <span class="texto-aluga">Alugue seus jogos favoritos</span>
+        </div>
+
+        <div class="flex p-10 flex-wrap flex-start">
+          <ion-button
+            shape="round"
+            color="primary"
+            size="large"
+            routerLink="/acervo"
+            class="transform hover:scale-105 transition-transform duration-300"
+          >
+            <ion-icon slot="start" name="dice-outline"></ion-icon>
+            Ver Acervo
+          </ion-button>
+
+          <ion-button
+            shape="round"
+            size="large"
+            style="--background: #25d366; --color: white"
+            class="transform hover:scale-105 transition-transform duration-300"
+            href="https://wa.me/5564999499516?text=Ol%C3%A1%2C%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20aluguel%20de%20jogos."
+          >
+            <ion-icon slot="start" name="logo-whatsapp"></ion-icon>
+            Fale Conosco
+          </ion-button>
+        </div>
+      </div>
+    </div>
+
+    <!--Como funciona-->
+    <div
+      class="bg-purple-900 rounded-3xl mx-5 my-8 p-10 shadow-lg border-l-4 border-white-400 text-white"
+    >
+      <h2 class="text-3xl font-bold mb-6 text-white">Como Funciona</h2>
+
+      <div class="flex flex-wrap justify-center items-center">
+        <div class="flex flex-col items-center w-32">
+          <div
+            class="bg-white w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg"
+          >
+            <ion-icon
+              name="grid-outline"
+              class="text-4xl text-purple-900"
+            ></ion-icon>
+          </div>
+          <h3 class="text-xl font-semibold pb-5">Escolha</h3>
+        </div>
+
+        <div class="flex flex-col items-center w-32">
+          <div
+            class="bg-white w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg"
+          >
+            <ion-icon
+              name="cube-outline"
+              class="text-4xl text-purple-900"
+            ></ion-icon>
+          </div>
+          <h3 class="text-xl font-semibold pb-5">Alugue</h3>
+        </div>
+
+        <div class="flex flex-col items-center w-32">
+          <div
+            class="bg-white w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg"
+          >
+            <ion-icon
+              name="dice-outline"
+              class="text-4xl text-purple-900"
+            ></ion-icon>
+          </div>
+          <h3 class="text-xl font-semibold pb-5">Jogue</h3>
+        </div>
+
+        <div class="flex flex-col items-center w-32">
+          <div
+            class="bg-white w-20 h-20 rounded-full flex items-center justify-center mb-4 shadow-lg"
+          >
+            <ion-icon
+              name="cube-outline"
+              class="text-4xl text-purple-900"
+            ></ion-icon>
+          </div>
+          <h3 class="text-xl font-semibold pb-5">Devolva</h3>
+        </div>
+      </div>
+    </div>
+
+    <!--Jogos em destaque-->
+    <div
+      class="bg-white rounded-3xl mx-5 my-8 p-10 shadow-lg border-r-4 border-purple-400"
+    >
+      <h2 class="text-3xl font-bold text-left">Jogos em Destaque</h2>
+
+      <ion-grid class="ion-text-center m-0 p-0">
+        <ion-row
+          class="ion-justify-content-center ion-align-items-center m-0 p-0"
+        >
+          <ion-col
+            size="12"
+            size-sm="6"
+            size-md="3"
+            *ngFor="let game of mostPopularGames"
+            class="m-0 p-0"
+          >
+            <ion-card
+              class="transform hover:scale-105 transition-transform duration-300"
+              button="true"
+            >
+              <ion-img
+                [src]="game.ImageUrl"
+                class="w-full h-48 object-cover"
+              ></ion-img>
+              <ion-card-header>
+                <ion-card-title class="text-xl font-bold text-purple-900"
+                  >{{game.Title}}</ion-card-title
+                >
+              </ion-card-header>
+              <ion-card-content class="text-gray-600">
+                {{game.Description}}
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <!-- About Section -->
+    <div
+      class="bg-purple-900 rounded-3xl mx-5 my-8 p-10 shadow-lg border-l-4 border-white-400"
+    >
+      <h2 class="text-3xl font-bold mb-6 text-white">Sobre a Próximo Turno</h2>
+      <p class="text-lg text-white mb-4">
+        Somos apaixonados por jogos de tabuleiro e queremos compartilhar essa
+        paixão com você. Nossa empresa de aluguel facilita o acesso aos melhores
+        jogos do mercado sem o compromisso de compra.
+      </p>
+      <p class="text-lg text-white">
+        Com varios títulos disponíveis, desde clássicos até os lançamentos mais
+        recentes, temos certeza que você encontrará o jogo perfeito para sua
+        próxima reunião com amigos ou família.
+      </p>
+    </div>
+
+    <!-- Advantages Section -->
+    <div
+      class="bg-white rounded-3xl mx-5 p-10 shadow-lg border-r-4 border-purple-400"
+    >
+      <h2 class="text-3xl font-bold mb-8 text-purple-900 text-left">
+        Por que alugar conosco?
+      </h2>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12" size-md="4">
+            <div class="text-center p-5">
+              <ion-icon
+                name="cash-outline"
+                class="text-5xl text-purple-800 mb-4"
+              ></ion-icon>
+              <h3 class="text-xl font-semibold text-purple-800 mb-2">
+                Economize
+              </h3>
+              <p class="text-gray-600">
+                Experimente jogos por uma fração do preço de compra
+              </p>
+            </div>
+          </ion-col>
+
+          <ion-col size="12" size-md="4">
+            <div class="text-center p-5">
+              <ion-icon
+                name="library-outline"
+                class="text-5xl text-purple-800 mb-4"
+              ></ion-icon>
+              <h3 class="text-xl font-semibold text-purple-800 mb-2">
+                Grande Seleção
+              </h3>
+              <p class="text-gray-600">
+                Acesso a dezenas de jogos para todas as idades
+              </p>
+            </div>
+          </ion-col>
+
+          <ion-col size="12" size-md="4">
+            <div class="text-center p-5">
+              <ion-icon
+                name="home-outline"
+                class="text-5xl text-purple-800 mb-4"
+              ></ion-icon>
+              <h3 class="text-xl font-semibold text-purple-800 mb-2">
+                Entrega em Casa
+              </h3>
+              <p class="text-gray-600">
+                Opções convenientes de entrega e retirada
+              </p>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title class="ion-text-center">
+      <small>© 2025 Próximo Turno - Todos os direitos reservados</small>
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>
